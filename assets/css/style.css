@@ -1,0 +1,561 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+input[type="file"]{
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+label{
+    font-size: 15px;
+    font-family: Roboto;
+    color: #8e8c8c;
+}
+textarea{
+    resize: none;
+}
+input[type="submit"]{
+    background-color: rgb(1, 86, 143);
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 20px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: Montserrat;
+    border: 2px solid rgb(1, 86, 143);
+    border-radius: 5px;
+    transition-duration: 0.4s;
+}
+input[type="submit"]:hover{
+    color: #ffffff;
+    opacity: 0.8;
+    transition-duration: 0.4s;
+}
+.tags span{
+    padding: 5px 10px;
+    background-color: rgb(1, 86, 143);
+    display: inline-block;
+    margin: 10px 10px 10px 0px;
+    border-radius: 8px;
+    color: #ffffff;
+}
+.tags span i{
+    margin-left: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.tags span i:hover{
+    opacity: 0.7;
+}
+.mainLink{
+    display: inline-block;
+    color: rgb(1, 86, 143);
+    text-transform: uppercase;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: Montserrat;
+    border: 2px solid rgb(1, 86, 143);
+    border-radius: 25px;
+    transition-duration: 0.4s;
+}
+.mainLink:hover{
+    text-decoration: none;
+    background-color: rgb(1, 86, 143);
+    color: #ffffff;
+    transition-duration: 0.4s;
+}
+
+/* navbar start */
+.headerSection{
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+.navbar{
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.25);
+}
+.navbar .navbar-brand{
+    font-size: 20px;
+    font-weight: bold;
+    color: #222222;
+    text-transform: uppercase;
+}
+.navbar .nav-item .nav-link{
+    margin-right: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #222222;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+}
+.navbar .nav-item .nav-link:hover{
+    color: rgb(1, 86, 143);
+    transition-duration: 0.4s;
+}
+.navbar .searching{
+    position: relative;
+    width: 190px;
+}
+.navbar .searching input{
+    width: 190px;
+    height: 30px;
+    padding-right: 16px;
+	border-radius: 0px;
+	background-color: #ffffff;
+    border: 1px solid rgb(1, 86, 143);
+}
+.navbar button.searchBtn{
+	position: absolute;
+    right: 1px;
+    top: 1px;
+	background-color: rgb(1, 86, 143);
+	color: #ffffff;
+	border: 1px solid transparent;
+    height: 28px;
+    border-radius: 0px;
+    transition-duration: 0.4s;
+}
+.navbar button.searchBtn:hover{
+    opacity: 0.8;
+    transition-duration: 0.4s;
+}
+/* navbar end */
+
+/* mainSection home start */
+.mainSectionHome p{
+    font-family: Montserrat;
+}
+.mainSectionHome .staticsBar{
+    background-color: rgb(245, 245, 245);
+}
+.mainSectionHome .staticsBar span{
+    display: block;
+    color: rgb(1, 86, 143);
+    font-size: 22px;
+}
+.mainSectionHome .staticsBar .staticsNum{
+    font-weight: bold;
+}
+.mainSectionHome .peopleStories{
+    box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+    width: 375px;
+}
+.mainSectionHome .peopleStories img{
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 2px;
+}
+.mainSectionHome .peopleStories p{
+    text-align: center;
+}
+.mainSectionHome .divider{
+    height: 1px;
+    background-color: rgb(226, 221, 221);;
+}
+/* mainSection home end */
+
+/* mainSection register start */
+.mainSectionRegister h2{
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: 600;
+    color: rgb(1, 86, 143);
+    margin-bottom: 50px;
+}
+.mainSectionRegister .personImage{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+/* mainSection register end */
+
+/* mainSection jobs start */
+.mainSectionJobs{
+    height: 100%;
+}
+.mainSectionJobs .tabContentContainer{
+    height: 100%;
+}
+.mainSectionJobs .tabContentContainer .tab-content{
+    height: 100%;
+ }
+.mainSectionJobs .sideBar{
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, rgb(1, 85, 142), rgb(1, 43, 72));
+}
+.mainSectionJobs .sideBar .nav-link{
+    text-transform: uppercase;
+    font-family: Montserrat;
+    color: #ffffff;
+    border-radius: 0px;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.mainSectionJobs .sideBar .nav-link:last-child{
+    margin-bottom: 0px;
+}
+.mainSectionJobs .sideBar .nav-link:hover{
+    background-color: rgb(4, 47, 78);
+}
+.mainSectionJobs .sideBar .nav-link.active{
+    background-color: rgb(4, 47, 78);
+    border-left: 2px solid #ffffff;
+}
+.mainSectionPostedJobs .searching,
+.mainSectionJobs .searching{
+    position: relative;
+}
+.mainSectionPostedJobs .searching input,
+.mainSectionJobs .searching input{
+    height: 44px;
+    padding-right: 55px;
+	border-radius: 0px;
+	background-color: #ffffff;
+    border: 1px solid rgb(1, 86, 143);
+}
+.mainSectionPostedJobs button.searchBtn,
+.mainSectionJobs button.searchBtn{
+	position: absolute;
+    right: 16px;
+    top: 1px;
+	background-color: rgb(1, 86, 143);
+	color: #ffffff;
+    border: 1px solid transparent;
+    width: 42px;
+    height: 42px;
+    border-radius: 0px;
+    transition-duration: 0.4s;
+}
+.mainSectionPostedJobs button.searchBtn:hover,
+.mainSectionJobs button.searchBtn:hover{
+    opacity: 0.8;
+    transition-duration: 0.4s;
+}
+.mainSectionJobs .tab-pane-head{
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: rgb(1, 86, 143);
+}
+.mainSectionJobs label{
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+#v-pills-jobs-management{
+    height: 100%;
+    min-height: 700px;
+    background-color: rgb(246, 246, 246);
+}
+#v-pills-jobs-management .managementContent{
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.25);
+}
+#v-pills-jobs-management .managementTitle{
+    font-family: Montserrat;
+    font-weight: 600;
+    color: rgb(1, 86, 143);
+}
+#v-pills-jobs-management .managementDescription{
+    font-size: 15px;
+    font-family: Roboto;
+    color: #8e8c8c;
+}
+#v-pills-jobs-management .editJob,
+#v-pills-jobs-management .repostJob{
+    font-family: Montserrat;
+    background-color: rgb(0, 71, 164);
+    color: #ffffff;
+    margin-right: 10px;
+    transition-duration: 0.4s;
+}
+#v-pills-jobs-management .editJob:hover,
+#v-pills-jobs-management .repostJob:hover{
+    opacity: 0.8;
+    transition-duration: 0.4s;
+}
+#v-pills-jobs-management .hideJob,
+#v-pills-jobs-management .detailsJob{
+    font-family: Montserrat;
+    background-color: #8e8c8c;
+    color: #ffffff;
+    margin-right: 10px;
+    transition-duration: 0.4s;
+}
+#v-pills-jobs-management .hideJob:hover,
+#v-pills-jobs-management .detailsJob:hover{
+    opacity: 0.8;
+    transition-duration: 0.4s;
+}
+#v-pills-jobs-management .jobStatus{
+    display: inline;
+    width: auto;
+    padding-top: 1px;
+}
+
+#v-pills-view-black-list{
+    height: 100%;
+    min-height: 700px;
+    background-color: rgb(246, 246, 246);
+}
+#v-pills-view-black-list .ratingContent{
+    background-color: #ffffff;
+    border-bottom: 1px solid rgb(246, 246, 246);
+}
+#v-pills-view-black-list .blackListImg{
+    width: 90px;
+}
+#v-pills-view-black-list .blackListImg img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(246, 246, 246);
+}
+#v-pills-view-black-list .blackListTitle{
+    font-family: Montserrat;
+    font-weight: 600;
+    color: rgb(1, 86, 143);
+}
+#v-pills-view-black-list .blackListDescription{
+    font-size: 15px;
+    font-family: Roboto;
+    color: #8e8c8c;
+}
+.blackListRating{
+    background-color: #ffffff;
+    height: 56px;
+    line-height: 56px;
+}
+
+#v-pills-employee-rating{
+    height: 100%;
+    min-height: 700px;
+    background-color: rgb(246, 246, 246);
+}
+#v-pills-employee-rating table{
+    background-color: #ffffff;
+}
+#v-pills-employee-rating table .employeeRatingHead{
+    color: rgb(1, 86, 143);
+}
+#v-pills-employee-rating table td{
+    vertical-align: middle;
+    font-size: 14px;
+    font-family: Roboto;
+    color: #8e8c8c;
+}
+#v-pills-employee-rating table .approve{
+    background-color: rgb(233, 124, 0);
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    border:  0px;
+    padding: 5px 12px;
+    transition-duration: 0.4s;
+}
+#v-pills-employee-rating table .approve:hover{
+    opacity: 0.7;
+    transition-duration: 0.4s;
+}
+/* mainSection jobs end */
+
+/* mainSection PostedJobs start */
+.mainSectionPostedJobs{
+    min-height: 700px;
+}
+.postedJobsHead{
+    background-color: rgb(1, 86, 143);
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: Montserrat;
+}
+.PostedJobsContent{
+    background-color: #ffffff;
+    border: 1px solid rgb(1, 86, 143);
+    border-top: 0px;
+}
+.PostedJobsTitle{
+    font-family: Montserrat;
+    font-weight: 600;
+    color: rgb(1, 86, 143);
+}
+.PostedJobsDate{
+    font-size: 13px;
+    font-weight: 400;
+    font-family: Roboto;
+    color: #6e6c6c;
+    margin-left: 20px;
+} 
+.PostedJobsDescription{
+    font-size: 15px;
+    font-family: Roboto;
+    color: #8e8c8c;
+}
+.PostedJobsTime,
+.PostedJobsSalary,
+.PostedJobsSkills{
+    font-size: 13px;
+    font-family: Roboto;
+    color: #6e6c6c;
+    margin-right: 40px;
+}
+.PostedJobsSkills{
+    margin-right: 3px;
+}
+.skills{
+    font-size: 13px;
+    font-family: Roboto;
+    text-decoration: none !important;
+}
+.skills::after{
+    content: " /";
+}
+.skills:last-child::after{
+    content: none;
+}
+.postCompanyName{
+    width:140px;
+    height: 60px;
+}
+.PostedJobsContent button,
+.modal-body button{
+    display: block;
+    margin-left: auto;
+    font-size: 14px;
+    font-family: Montserrat;
+    color: #ffffff;
+    border: 0px;
+    width:126px;
+    height: 36px;
+    transition-duration: 0.4s;
+}
+.PostedJobsContent button:hover,
+.modal-body button:hover{
+    opacity: 0.8;
+    transition-duration: 0.4s;
+}
+.PostedJobsSubmit{
+    background-color: rgb(0, 71, 164);
+    margin-bottom: 7px !important;
+}
+.PostedJobsDetails{
+    background-color: #8e8c8c;
+}
+.mainSectionPostedJobs .modal .modal-content{
+    border-radius: 0px;
+    background-color: #1f4ba5;
+}
+.mainSectionPostedJobs .modal .modal-header{
+    border-radius: 0px;
+    background-color: #1f4ba5;
+}
+.mainSectionPostedJobs .modal .modal-title{
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #ffffff;
+}
+.mainSectionPostedJobs .modal .close{
+    color: #ffffff;
+    opacity: 1;
+}
+.mainSectionPostedJobs .modal .close:hover,
+.mainSectionPostedJobs .modal .close:focus{
+    opacity: 0.5;
+    outline: 0px;
+}
+.mainSectionPostedJobs .modal .modal-body{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #ffffff;
+}
+.mainSectionPostedJobs .divider{
+    height: 1px;
+    background-color: rgb(226, 221, 221);;
+}
+.mainSectionPostedJobs .modal p{
+    font-size: 15px;
+    font-family: Roboto;
+    color: #8e8c8c;
+}
+/* mainSection PostedJobs end */
+
+/* mainSection login start */
+.mainSectionLogin .loginHead{
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: rgb(1, 86, 143);
+}
+/* mainSection login end */
+
+/* Rating Star Style start */
+.ratingApplicant{
+    background-color: #ffffff;
+}
+.ratingApplicant ul{
+    margin-bottom: 0px;
+}
+.rating-stars label{
+    width: 200px;
+}
+.rating-stars .total{
+    font-weight: bold;
+}
+.rating-stars ul{
+    list-style-type: none;
+    padding: 0px;
+}
+  .rating-stars ul > li.star{
+    display: inline-block;
+}
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa{
+    font-size: 20px; /* Change the size of the stars */
+    color: #ccc; /* Color on idle state */
+    cursor: pointer;
+}
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa{
+    color: #FFCC36;
+}
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa{
+    color: #FF912C;
+}
+.disabledStar{
+    pointer-events: none;
+    opacity: 0.6;
+}
+/* Rating Star Style end */
+
+@media (min-width: 992px){
+    .rightSection{
+        float: right !important;
+    }
+    .leftSection{
+        float: right !important;
+    }
+}

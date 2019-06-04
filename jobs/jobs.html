@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700|Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>Jobs</title>
+  </head>
+  <body>
+    <!-- header section start -->
+    <div class="container-fluid headerSection">
+      <!-- navbar start -->
+      <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light w-100 px-5 py-3">
+          <a class="navbar-brand" href="../index.html">pal jobs</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">feed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">authors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">explore</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">contact</a>
+                </li>
+            </ul>
+            <form class="form-inline searching ml-lg-4 mt-3 mt-lg-0" action="">
+              <div class="form-group">
+                <input type="search" placeholder="Search" class="form-control">
+                <button type="submit" class="searchBtn">
+                    <i class='fas fa-search'></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+      <!-- navbar end -->
+    </div>
+    <!-- header section end -->
+
+    <!-- main section start -->
+    <div class="container-fluid mainSectionJobs">
+      <div class="row">
+        <div class="sideBar col-3 px-0">
+          <div class="nav  flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-posting-job-tab" data-toggle="pill" href="#v-pills-posting-job" role="tab" aria-controls="v-pills-posting-job" aria-selected="true">post a job</a>
+            <a class="nav-link" id="v-pills-jobs-management-tab" data-toggle="pill" href="#v-pills-jobs-management" role="tab" aria-controls="v-pills-jobs-management" aria-selected="false">manage my jobs</a>
+            <a class="nav-link" id="v-pills-employee-rating-tab" data-toggle="pill" href="#v-pills-employee-rating" role="tab" aria-controls="v-pills-employee-rating" aria-selected="false">manage applicants</a>
+            <a class="nav-link" id="v-pills-view-employee-rating-tab" data-toggle="pill" href="#v-pills-view-employee-rating" role="tab" aria-controls="v-pills-view-employee-rating" aria-selected="false">rate an applicant</a>
+            <a class="nav-link" id="v-pills-view-black-list-tab" data-toggle="pill" href="#v-pills-view-black-list" role="tab" aria-controls="v-pills-view-black-list" aria-selected="false">view ratings</a>
+            <a class="nav-link" id="v-pills-change-password-tab" data-toggle="pill" href="#v-pills-change-password" role="tab" aria-controls="v-pills-change-password" aria-selected="false">change password</a>
+          </div>
+        </div>
+        <div class="tabContentContainer w-100 offset-3">
+          <div class="tab-content" id="v-pills-tabContent">
+
+            <div class="tab-pane fade show active col-md-8 mx-auto" id="v-pills-posting-job" role="tabpanel" aria-labelledby="v-pills-posting-job-tab">
+              <h5 class="tab-pane-head my-5">post a job</h5>
+              <form action="">
+                <div class="form-group">
+                  <label for="jobTitle">job title</label>
+                  <input type="text" name="jobTitle" class="form-control" id="jobTitle" placeholder="Job title" required>
+                </div>
+                <div class="form-group">
+                  <label for="jobDescription">job description</label>
+                  <textarea name="jobDescription" class="form-control" id="jobDescription" rows="3" placeholder="Job description" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="requiredSkills">required skills</label>
+                  <input type="text" name="requiredSkills" class="form-control add-tag" id="requiredSkills" placeholder="Enter a skill then press comma [ , ]">
+                  <div class="tags skills-values"></div>
+                </div>
+                <div class="form-group">
+                  <label for="universitySpecialization">university specialization</label>
+                  <input type="text" name="universitySpecialization" class="form-control" id="universitySpecialization" placeholder="University specialization" required>
+                </div>
+                <div class="form-group">
+                  <label for="gpa">GPA</label>
+                  <input type="number" name="gpa" class="form-control" id="gpa" placeholder="GPA" required>
+                </div>
+                <div class="form-group">
+                  <label for="salary">salary</label>
+                  <input type="number" name="salary" class="form-control" id="salary" placeholder="Salary" required>
+                </div>
+                <label class="d-block mt-4">contract period</label>
+                <div class="custom-control custom-radio custom-control-inline mb-3">
+                  <input type="radio" id="full-time" name="period" class="custom-control-input" checked>
+                  <label class="custom-control-label" for="full-time">full time</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline mb-3">
+                  <input type="radio" id="part-time" name="period" class="custom-control-input">
+                  <label class="custom-control-label" for="part-time">part time</label>
+                </div>
+                <div class="form-group">
+                  <label for="deadlineToAccept">deadline to accept</label>
+                  <input type="date" name="deadlineToAccept" class="form-control" id="deadlineToAccept" required>
+                </div>
+                <input type="submit" name="postJob" class="my-4" value="post a job">
+              </form>
+            </div>
+
+            <div class="tab-pane fade jobsManagementTable py-5" id="v-pills-jobs-management" role="tabpanel" aria-labelledby="v-pills-jobs-management-tab">
+              <form class="form-inline searching col-md-8 mx-auto mb-5" action="">
+                <div class="form-group w-100">
+                  <input type="search" placeholder="Search for a posted job" class="form-control w-100">
+                  <button type="submit" class="searchBtn">
+                      <i class='fas fa-search'></i>
+                  </button>
+                </div>
+              </form>
+              
+              <div class="managementContent px-5 py-3">
+                <h4 class="managementTitle">Software Developer-Java</h4>
+                <p class="managementDescription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis dolorem voluptas deleniti laborum fugiat eaque. Impedit, libero magnam, quasi odit animi quam et distinctio fugit exercitationem pariatur enim asperiores eaque.</p>
+                <a href="jobs.html" class="btn editJob">Edit</a>
+                <button type="button" class="btn hideJob">Hide</button>
+                <button type="button" class="btn repostJob" data-toggle="modal" data-target="#repost">Repost</button>
+                <button type="button" class="btn detailsJob" data-toggle="modal" data-target="#details-post">Details</button>
+                <select class="form-control jobStatus">
+                  <option>Accepted</option>
+                  <option>Wait</option>
+                  <option>Approved</option>
+                </select>
+              </div>
+              <div class="managementContent px-5 py-3">
+                <h4 class="managementTitle">Software Developer-Java</h4>
+                <p class="managementDescription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis dolorem voluptas deleniti laborum fugiat eaque. Impedit, libero magnam, quasi odit animi quam et distinctio fugit exercitationem pariatur enim asperiores eaque.</p>
+                <a href="jobs.html" class="btn editJob">Edit</a>
+                <button type="button" class="btn hideJob">Hide</button>
+                <button type="button" class="btn repostJob" data-toggle="modal" data-target="#repost">Repost</button>
+                <button type="button" class="btn detailsJob" data-toggle="modal" data-target="#details-post">Details</button>
+                <select class="form-control jobStatus">
+                  <option>Accepted</option>
+                  <option>Wait</option>
+                  <option>Approved</option>
+                </select>
+              </div>
+              <div class="managementContent px-5 py-3">
+                <h4 class="managementTitle">Software Developer-Java</h4>
+                <p class="managementDescription">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis dolorem voluptas deleniti laborum fugiat eaque. Impedit, libero magnam, quasi odit animi quam et distinctio fugit exercitationem pariatur enim asperiores eaque.</p>
+                <a href="jobs.html" class="btn editJob">Edit</a>
+                <button type="button" class="btn hideJob">Hide</button>
+                <button type="button" class="btn repostJob" data-toggle="modal" data-target="#repost">Repost</button>
+                <button type="button" class="btn detailsJob" data-toggle="modal" data-target="#details-post">Details</button>
+                <select class="form-control jobStatus">
+                  <option>Accepted</option>
+                  <option>Wait</option>
+                  <option>Approved</option>
+                </select>
+              </div>
+
+              <!-- repost modal start -->
+              <div class="modal fade" id="repost" tabindex="-1" role="dialog" aria-labelledby="repostTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="repostTitle">Repost</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="">
+                        <div class="form-group">
+                          <label for="deadlineToAccept">deadline to accept</label>
+                          <input type="date" name="deadlineToAccept" class="form-control" id="deadlineToAccept">
+                        </div>
+                        <input type="submit" name="save" value="save">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- repost modal end -->
+
+              <!-- details modal start -->
+              <div class="modal fade" id="details-post" tabindex="-1" role="dialog" aria-labelledby="details-postTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="details-postTitle">Details</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">Modal body</div>
+                  </div>
+                </div>
+              </div>
+              <!-- details modal end -->
+            </div>
+
+            <div class="tab-pane fade py-5" id="v-pills-employee-rating" role="tabpanel" aria-labelledby="v-pills-employee-rating-tab">
+              <h5 class="tab-pane-head mx-5">manage applicants</h5>
+              <form class="form-inline searching mt-5 mb-4 px-5" action="">
+                <div class="form-group px-0 col-md-8 col-lg-6">
+                  <label for="jobTitleSelect">Job title</label>
+                  <select id="jobTitleSelect" class="form-control col ml-4">
+                    <option>All</option>
+                    <option>Front-end</option>
+                    <option>Back-end</option>
+                  </select>
+                </div>
+              </form>
+
+              <div class="row mx-0 px-5">
+                <table class="table mb-5">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="employeeRatingHead">Full name</th>
+                      <th scope="col" class="employeeRatingHead">ID</th>
+                      <th scope="col" class="employeeRatingHead">GPA</th>
+                      <th scope="col" class="employeeRatingHead">Job title</th>
+                      <th scope="col" class="employeeRatingHead">Approve</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="fullName">Ali Ahmed</span></td>
+                      <td><span class="idNumber">911400781</span></td>
+                      <td><span class="gpa">90.9</span>%</td>
+                      <td><span class="jobTitle">Front-end</span></td>
+                      <td>
+                        <button type="button" name="approve" class="approve">Approve</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><span class="fullName">Ali Ahmed</span></td>
+                      <td><span class="idNumber">911400781</span></td>
+                      <td><span class="gpa">90.9</span>%</td>
+                      <td><span class="jobTitle">Front-end</span></td>
+                      <td>
+                        <button type="button" name="approve" class="approve">Approve</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab-pane fade col-md-8 mx-auto" id="v-pills-view-employee-rating" role="tabpanel" aria-labelledby="v-pills-view-employee-rating-tab">
+              <h5 class="tab-pane-head my-5">rate an applicant</h5>
+              <form action="">
+                <div class="form-group mb-5">
+                  <label for="applicantName">Select an applicant</label>
+                  <select id="applicantName" class="form-control">
+                    <option>Ali Ahmed</option>
+                    <option>Sami Mohammed</option>
+                    <option>Mohammed Mahmoud</option>
+                  </select>
+                </div>
+                <div class="custom-control custom-switch chBox mb-3">
+                  <input type="checkbox" class="custom-control-input selectApplicant" id="selectApplicant">
+                  <label class="custom-control-label" for="selectApplicant">Select an specific applicant</label>
+                </div>
+                <div class="form-group">
+                  <label for="firstName">First name</label>
+                  <input type="text" name="firstName" class="form-control specificApplicant" id="firstName" placeholder="Enter first name" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last name</label>
+                  <input type="text" name="lastName" class="form-control specificApplicant" id="lastName" placeholder="Enter last name" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="idNumber">ID number</label>
+                  <input type="number" name="idNumber" class="form-control specificApplicant" id="idNumber" placeholder="Enter ID number" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="city">City</label>
+                  <select name="city" id="city" class="form-control specificApplicant" disabled>
+                    <option>Gaza</option>
+                    <option>Ramallah</option>
+                  </select>
+                </div>
+                <!-- Rating Stars Functionality Box -->
+                <div class='rating-stars mt-5'>
+                  <label class="float-left">functionality</label>
+                  <ul id='stars'>
+                    <li class='star' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Fair' data-value='2'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Good' data-value='3'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Excellent' data-value='4'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='WOW!!!' data-value='5'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Rating Stars Attendance Box -->
+                <div class='rating-stars mt-4'>
+                  <label class="float-left">attendance</label>
+                  <ul id='stars'>
+                    <li class='star' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Fair' data-value='2'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Good' data-value='3'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Excellent' data-value='4'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='WOW!!!' data-value='5'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Rating Stars Personality Box -->
+                <div class='rating-stars mt-4'>
+                  <label class="float-left">personality</label>
+                  <ul id='stars'>
+                    <li class='star' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Fair' data-value='2'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Good' data-value='3'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Excellent' data-value='4'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='WOW!!!' data-value='5'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Rating Stars Conduct Box -->
+                <div class='rating-stars mt-4'>
+                  <label class="float-left">conduct</label>
+                  <ul id='stars'>
+                    <li class='star' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Fair' data-value='2'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Good' data-value='3'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='Excellent' data-value='4'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star' title='WOW!!!' data-value='5'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Rating Stars Total-rating Box -->
+                <div class='rating-stars mt-4 mb-5'>
+                  <label class="float-left total">total rating</label>
+                  <ul id='stars'>
+                    <li class='star disabledStar' title='Poor' data-value='1'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star disabledStar' title='Fair' data-value='2'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star disabledStar' title='Good' data-value='3'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star disabledStar' title='Excellent' data-value='4'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                    <li class='star disabledStar' title='WOW!!!' data-value='5'>
+                      <i class='fa fa-star fa-fw'></i>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+            </div>
+
+            <div class="tab-pane fade py-5" id="v-pills-view-black-list" role="tabpanel" aria-labelledby="v-pills-view-black-list-tab">
+                <form class="form-inline searching px-4 mb-5" action="">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="viewBlacklist">
+                    <label class="custom-control-label" for="viewBlacklist">View Blacklist</label>
+                  </div>
+                </form>
+
+                <div class="d-flex flex-wrap justify-content-around mt-4">
+                  <div class="mb-4">
+                    <div class="ratingContent d-flex px-3 pt-3 mx-2">
+                      <div class="blackListImg">
+                        <img class="img-fluid" src="../assets/img/person-image.png" alt="company logo" title="company logo">
+                      </div>
+                      <div class="blackListText">
+                        <h5 class="blackListTitle">Applicant name</h5>
+                        <p class="blackListDescription mt-3 mb-2">United States</p>
+                        <p class="blackListDescription">ID : <span class="idNumber">911400781</span></p>
+                      </div>
+                    </div>
+                    <!-- Rating Stars Box -->
+                    <div class='rating-stars ratingApplicant px-3 py-3 mx-2'>
+                      <ul id='stars' class='text-center'>
+                        <li class='star disabledStar' title='Poor' data-value='1'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Fair' data-value='2'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Good' data-value='3'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Excellent' data-value='4'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='WOW!!!' data-value='5'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="ratingContent d-flex px-3 pt-3 mx-2">
+                      <div class="blackListImg">
+                        <img class="img-fluid" src="../assets/img/person-image.png" alt="company logo" title="company logo">
+                      </div>
+                      <div class="blackListText">
+                        <h5 class="blackListTitle">Applicant name</h5>
+                        <p class="blackListDescription mt-3 mb-2">United States</p>
+                        <p class="blackListDescription">ID : <span class="idNumber">911400781</span></p>
+                      </div>
+                    </div>
+                    <!-- Rating Stars Box -->
+                    <div class='rating-stars ratingApplicant px-3 py-3 mx-2'>
+                      <ul id='stars' class='text-center'>
+                        <li class='star disabledStar' title='Poor' data-value='1'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Fair' data-value='2'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Good' data-value='3'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Excellent' data-value='4'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='WOW!!!' data-value='5'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="ratingContent d-flex px-3 pt-3 mx-2">
+                      <div class="blackListImg">
+                        <img class="img-fluid" src="../assets/img/person-image.png" alt="company logo" title="company logo">
+                      </div>
+                      <div class="blackListText">
+                        <h5 class="blackListTitle">Applicant name</h5>
+                        <p class="blackListDescription mt-3 mb-2">United States</p>
+                        <p class="blackListDescription">ID : <span class="idNumber">911400781</span></p>
+                      </div>
+                    </div>
+                    <!-- Rating Stars Box -->
+                    <div class='rating-stars ratingApplicant px-3 py-3 mx-2'>
+                      <ul id='stars' class='text-center'>
+                        <li class='star disabledStar' title='Poor' data-value='1'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Fair' data-value='2'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Good' data-value='3'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Excellent' data-value='4'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='WOW!!!' data-value='5'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="ratingContent d-flex px-3 pt-3 mx-2">
+                      <div class="blackListImg">
+                        <img class="img-fluid" src="../assets/img/person-image.png" alt="company logo" title="company logo">
+                      </div>
+                      <div class="blackListText">
+                        <h5 class="blackListTitle">Applicant name</h5>
+                        <p class="blackListDescription mt-3 mb-2">United States</p>
+                        <p class="blackListDescription">ID : <span class="idNumber">911400781</span></p>
+                      </div>
+                    </div>
+                    <!-- Rating Stars Box -->
+                    <div class='rating-stars ratingApplicant px-3 py-3 mx-2'>
+                      <ul id='stars' class='text-center'>
+                        <li class='star disabledStar' title='Poor' data-value='1'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Fair' data-value='2'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Good' data-value='3'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Excellent' data-value='4'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='WOW!!!' data-value='5'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="ratingContent d-flex px-3 pt-3 mx-2">
+                      <div class="blackListImg">
+                        <img class="img-fluid" src="../assets/img/person-image.png" alt="company logo" title="company logo">
+                      </div>
+                      <div class="blackListText">
+                        <h5 class="blackListTitle">Applicant name</h5>
+                        <p class="blackListDescription mt-3 mb-2">United States</p>
+                        <p class="blackListDescription">ID : <span class="idNumber">911400781</span></p>
+                      </div>
+                    </div>
+                    <!-- Rating Stars Box -->
+                    <div class='rating-stars ratingApplicant px-3 py-3 mx-2'>
+                      <ul id='stars' class='text-center'>
+                        <li class='star disabledStar' title='Poor' data-value='1'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Fair' data-value='2'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Good' data-value='3'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Excellent' data-value='4'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='WOW!!!' data-value='5'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="mb-4">
+                    <div class="ratingContent d-flex px-3 pt-3 mx-2">
+                      <div class="blackListImg">
+                        <img class="img-fluid" src="../assets/img/person-image.png" alt="company logo" title="company logo">
+                      </div>
+                      <div class="blackListText">
+                        <h5 class="blackListTitle">Applicant name</h5>
+                        <p class="blackListDescription mt-3 mb-2">United States</p>
+                        <p class="blackListDescription">ID : <span class="idNumber">911400781</span></p>
+                      </div>
+                    </div>
+                    <!-- Rating Stars Box -->
+                    <div class='rating-stars ratingApplicant px-3 py-3 mx-2'>
+                      <ul id='stars' class='text-center'>
+                        <li class='star disabledStar' title='Poor' data-value='1'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Fair' data-value='2'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Good' data-value='3'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='Excellent' data-value='4'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class='star disabledStar' title='WOW!!!' data-value='5'>
+                          <i class='fa fa-star fa-fw'></i>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="tab-pane fade" id="v-pills-change-password" role="tabpanel" aria-labelledby="v-pills-change-password-tab">
+              <h5 class="tab-pane-head my-5 mx-5">change password</h5>
+              <div class="d-flex">
+                <form class="col pl-5" action="">
+                  <div class="form-group">
+                    <label for="oldPassword">Old password</label>
+                    <input type="password" name="oldPassword" class="form-control" id="oldPassword" placeholder="Enter old password">
+                  </div>
+                  <div class="form-group">
+                    <label for="newPassword">New password</label>
+                    <input type="password" name="newPassword" class="form-control" id="newPassword" placeholder="Enter new password" aria-describedby="passwordNote">
+                    <small id="passwordNote" class="form-text text-muted">Must be 8-20 characters long.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="confirmPassword">Confirm password</label>
+                    <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" placeholder="Confirm password">
+                  </div>
+                  <input type="submit" name="changePassword" class="my-4" value="change password">
+                </form>
+                <div class="changePasswordImg col">
+                  <img class="img-fluid" src="../assets/img/changePasswordImg.png">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main section end -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../assets/js/jquery3.3.1.js"></script>
+    <script src="../assets/js/popper.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
